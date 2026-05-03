@@ -5,7 +5,7 @@ export const BgImage = ({src}: {src: string}) => {
         <Image src={src}
             width={9999}
             height={9999} 
-            className="[grid-area:1/1] w-full h-screen object-cover hidden lg:block starting:blur-lg transition duration-700" 
+            className="[grid-area:1/1] w-full h-screen object-cover hidden lg:block starting:blur-lg transition-discrete transition duration-700" 
             alt={src.slice(0,-4)}
         />
     )
