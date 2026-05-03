@@ -1,32 +1,38 @@
-import Image from "next/image";
-import { JSX } from "react";
+"use client"
+import { Activity, JSX, useState } from "react";
+import { Header } from "./components/header";
+import { Main } from "./components/main";
+import { BgImage } from "./components/bg-image";
 
+const bgSources = [
+  '/home/background-home-desktop.jpg',
+  '/destination/background-destination-desktop.jpg',
+  '/crew/background-crew-desktop.jpg',
+  '/technology/background-technology-desktop.jpg'
+]
 
 export default function Home() {
+  const [pageNo, setPageNo] = useState(0)
   return (
     <div className="w-full grid">
-      <Image src={'/home/background-home-desktop.jpg'} width={99999} height={99999} className="[grid-area:1/1] w-full h-screen object-cover hidden lg:block" alt="bg-desktop"/>
-      <div className="[grid-area:1/1] flex flex-col lg:max-w-7xl lg:mx-auto w-full lg:px-10">
-        <Header/>
-        <Main/>
+      {bgSources.map((src, idx) => {
+        return (
+          <Activity
+            key={src}
+            mode={pageNo===idx ? "visible" : "hidden"}            
+          >
+            <BgImage src={src} />
+          </Activity>
+        )
+      })}      
+      
+      
+      <div className="[grid-area:1/1] z-10 flex flex-col lg:max-w-7xl lg:mx-auto w-full lg:px-10">
+        <Header pageNo={pageNo} setPageNo={setPageNo}/>
+        <Main pageNo={pageNo} setPageNo={setPageNo}/>
       </div>
+      <div className="[grid-area:1/1] z-5 absolute h-20 top-9 right-0  w-[55%] bg-linear-to-r bg-white/5 backdrop-blur-lg"></div>
     </div>
   );
 }
 
-const Header = ():JSX.Element => {
-    return (
-        <header className="w-full mt-12 flex items-center">
-            <Image src={'/shared/logo.svg'} width={1000} height={1000} className="w-12" alt="logo"/>
-            <div className="min-h-0.5 max-h-0.5 bg-white w-full ml-20"></div>
-        </header>
-    )
-}
-
-const Main = ():JSX.Element => {
-    return (
-        <main className="w-full">
-
-        </main>
-    )
-}
