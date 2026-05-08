@@ -4,10 +4,10 @@ import { BgImage } from "./bg-image";
 import { usePathname } from "next/navigation";
 
 const bgSources = {
-    'home': '/home/background-home-desktop.jpg',
-    'destination': '/destination/background-destination-desktop.jpg',
-    'crew': '/crew/background-crew-desktop.jpg',
-    'technology' : '/technology/background-technology-desktop.jpg'
+    'home': '/assets/home/background-home-desktop.jpg',
+    'destination': '/assets/destination/background-destination-desktop.jpg',
+    'crew': '/assets/crew/background-crew-desktop.jpg',
+    'technology' : '/assets/technology/background-technology-desktop.jpg'
 }
 
 export const AllBgImages = () => {

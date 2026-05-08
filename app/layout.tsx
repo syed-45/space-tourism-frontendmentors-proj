@@ -20,8 +20,8 @@ const fontBarlowCondensed = Barlow_Condensed({
 })
 
 export const metadata: Metadata = {
-  title: "Digitalbank",
-  description: "Landing page for Digitalbank, Frontend Mentor challenge",
+  title: "Frontend Mentor | Space tourism website",
+  description: "Design and assets provided through frontend mentor, website developed by Syed",
 };  
 
 
