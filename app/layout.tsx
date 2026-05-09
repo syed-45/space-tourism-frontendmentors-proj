@@ -38,8 +38,8 @@ export default function RootLayout({
       <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png"></link>
       <body className="min-h-full grid">
         <AllBgImages/>
-        <div className="[grid-area:1/1] z-5 absolute h-20 top-9 right-0 w-[55%] bg-white/5 backdrop-blur-lg"></div>
-        <div className="[grid-area:1/1] z-10 flex flex-col lg:max-w-7xl lg:mx-auto w-full lg:px-10">
+        <div className="[grid-area:1/1] z-5 absolute h-20 top-9 right-0 w-[55%] bg-white/5 backdrop-blur-lg hidden lg:block"></div>
+        <div className="[grid-area:1/1] z-10 flex flex-col lg:max-w-7xl lg:mx-auto w-full lg:px-8 overflow-hidden relative">
           <Header/>
           {children}
         </div>

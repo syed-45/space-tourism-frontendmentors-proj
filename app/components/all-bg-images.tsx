@@ -1,14 +1,7 @@
 "use client"
 import { Activity, } from "react";
-import { BgImage } from "./bg-image";
+import { ResponsiveBgImages } from "./bg-image";
 import { usePathname } from "next/navigation";
-
-const bgSources = {
-    'home': '/assets/home/background-home-desktop.jpg',
-    'destination': '/assets/destination/background-destination-desktop.jpg',
-    'crew': '/assets/crew/background-crew-desktop.jpg',
-    'technology' : '/assets/technology/background-technology-desktop.jpg'
-}
 
 export const AllBgImages = () => {
     const pathname = usePathname()
@@ -20,22 +13,22 @@ export const AllBgImages = () => {
             <Activity
                 mode={currPage === "home" ? "visible" : "hidden"}
             >
-                <BgImage src={bgSources[currPage as keyof typeof bgSources]}/>
+                <ResponsiveBgImages src={'/assets/home/background-home'}/>
             </Activity>
             <Activity
                 mode={currPage === "destination" ? "visible" : "hidden"}
             >
-                <BgImage src={bgSources[currPage as keyof typeof bgSources]}/>
+                <ResponsiveBgImages src={'/assets/destination/background-destination'}/>
             </Activity>
             <Activity
                 mode={currPage === "crew" ? "visible" : "hidden"}
             >
-                <BgImage src={bgSources[currPage as keyof typeof bgSources]}/>
+                <ResponsiveBgImages src={'/assets/crew/background-crew'}/>
             </Activity>
             <Activity
                 mode={currPage === "technology" ? "visible" : "hidden"}
             >
-                <BgImage src={bgSources[currPage as keyof typeof bgSources]}/>
+                <ResponsiveBgImages src={'/assets/technology/background-technology'}/>
             </Activity>
         </>
         
