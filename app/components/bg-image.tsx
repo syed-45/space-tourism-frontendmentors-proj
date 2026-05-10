@@ -6,7 +6,7 @@ export const ResponsiveBgImages = ({src}: {src: string}) => {
             <Image src={src+"-desktop.jpg"}
                 width={9999}
                 height={9999} 
-                className="[grid-area:1/1] w-full h-screen object-cover hidden lg:block starting:blur-lg transition-discrete transition duration-700" 
+                className="[grid-area:1/1] w-full h-full object-cover hidden lg:block starting:blur-lg transition-discrete transition duration-700" 
                 alt={src.slice(0,-4)}
             />
             <Image src={src+"-tablet.jpg"}

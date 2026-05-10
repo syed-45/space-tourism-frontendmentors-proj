@@ -35,14 +35,14 @@ export const DestinationInfo = () => {
                 <h2 className="text-7xl uppercase font-Bellefair mt-8 max-lg:mt-12">
                     {currDestination.name}
                 </h2>
-                <p className="leading-7 mt-4 text-BLUE-300 max-lg:text-xl max-lg:leading-8">{currDestination.description}</p>  
+                <p className="leading-7 mt-4 text-BLUE-300 max-lg:text-xl max-lg:leading-8 max-sm:h-49 sm:max-lg:h-28">{currDestination.description}</p>  
                 <div className="h-[0.4] bg-gray-700 w-full mt-7"></div>
-                <div className="grid place-items-center lg:grid-cols-2 mt-4">
+                <div className="grid place-items-center sm:grid-cols-2 mt-4">
                     <div className="flex flex-col items-start max-lg:items-center">
                         <div className="text-lg lg:text-sm font-Barlow-Condensed tracking-widest text-BLUE-300">AVG. DISTANCE</div>
                         <div className="font-Bellefair text-2xl uppercase mt-3 max-lg:text-4xl">{currDestination.distance}</div>
                     </div>
-                    <div className="flex flex-col items-start max-lg:items-center max-lg:mt-10">
+                    <div className="flex flex-col items-start max-lg:items-center max-sm:mt-10">
                         <div className="text-lg lg:text-sm font-Barlow-Condensed tracking-widest text-BLUE-300">EST. TRAVEL TIME</div>
                         <div className="font-Bellefair text-2xl uppercase mt-3 max-lg:text-4xl">{currDestination.travel}</div>
                     </div>
