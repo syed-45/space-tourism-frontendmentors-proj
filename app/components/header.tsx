@@ -26,7 +26,7 @@ export const Header = ():JSX.Element => {
           <div className="h-[0.8px] bg-gray-700/80 w-[72%] ml-20 hidden lg:block"></div>
           <nav 
           className={`starting:translate-x-40 starting:opacity-0 transition transition-discrete duration-400 ease-out absolute z-40 w-7/10 min-h-full top-0 right-0 backdrop-blur-2xl flex flex-col gap-9 pl-6
-            sm:backdrop-blur-none sm:bg-white/5 sm:w-full sm:static sm:min-h-0 sm:flex-row sm:py-10 sm:px-8 sm:gap-10 sm:justify-end sm:translate-x-0 sm:grow lg:bg-transparent lg:justify-start lg:p-0 lg:pl-10 ${isMobileMenuOpen ? "flex translate-x-0 opacity-100" : "opacity-0 hidden sm:flex sm:opacity-100 translate-x-40"}`
+            sm:backdrop-blur-none sm:bg-white/5 sm:w-full sm:static sm:min-h-0 sm:flex-row sm:py-10 sm:px-8 sm:gap-10 sm:justify-end sm:translate-x-0 sm:grow lg:bg-transparent lg:justify-start lg:p-0 lg:pl-10 max-xs:w-full ${isMobileMenuOpen ? "flex translate-x-0 opacity-100" : "opacity-0 hidden sm:flex sm:opacity-100 translate-x-40"}`
           }>
               <div className="pt-11 mb-18 flex justify-end mr-8 sm:hidden">
                 <button
@@ -61,7 +61,7 @@ export const Header = ():JSX.Element => {
                 <div className={`${currPage === "crew" ? 'opacity-100 translate-0' : ""} absolute sm:top-11.75 sm:left-1/2 -translate-x-1/2 sm:w-full sm:h-[2.5px] w-1 h-full top-0 right-0 transition duration-300 bg-white opacity-0`}></div>
             </Link>
             <Link 
-              href={"/technology"}
+              href={"/technology/launch-vehicle"}
               onClick={() => setIsMobileMenuOpen(false)}
               className={`text-sm cursor-pointer tracking-widest font-Barlow-Condensed relative hover:[&>div]:opacity-40`}
             >

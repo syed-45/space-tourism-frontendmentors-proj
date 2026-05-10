@@ -18,7 +18,7 @@ export const CrewInfo = () => {
             <div>
                 <div className="text-3xl text-white/30 uppercase font-Bellefair lg:mt-30">{currCrewMemberInfo.role}</div>
                 <h2 className="text-4xl uppercase font-Bellefair mt-4 h-20 sm:h-16">{currCrewMemberInfo.name}</h2>  
-                <p className="text-lg text-BLUE-300 mt-7 h-47 sm:h-40 sm:max-w-md">{currCrewMemberInfo.bio}</p>
+                <p className="text-lg text-BLUE-300 mt-7 h-47 sm:h-40 sm:max-w-md max-lg:mx-auto">{currCrewMemberInfo.bio}</p>
                 <div className="flex justify-center items-center gap-7 py-3 lg:mt-26 lg:justify-start">
                     {crewMemberSegments.map((segment, idx) => {
                         if (idx === 3) return <></>
@@ -33,7 +33,7 @@ export const CrewInfo = () => {
                     })}
                 </div>
             </div>
-            <div className="h-83 sm:h-120 lg:h-140 flex flex-col justify-end">
+            <div className="h-fit sm:h-120 lg:h-140 flex flex-col justify-end">
                 <Image
                     alt={crewMemberName}
                     src={currCrewMemberInfo.images.png.slice(1,)}

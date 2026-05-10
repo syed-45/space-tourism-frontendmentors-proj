@@ -11,6 +11,7 @@
   --font-Barlow-Condensed: var(--font-Barlow-Condensed);
   --color-BLUE-900: #0B0D17;
   --color-BLUE-300: #D0D6F9;
+  --breakpoint-xs: 340px;
 }
 
 body {
