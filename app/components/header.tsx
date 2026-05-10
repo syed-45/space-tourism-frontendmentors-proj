@@ -12,7 +12,11 @@ export const Header = ():JSX.Element => {
           
     return (
         <header className="w-full h-20 max-sm:mt-4 lg:mt-9 flex items-center lg:gap-10 p-7 sm:px-0 lg:p-0 justify-between lg:justify-start">
-          <Image alt="logo" src={'/assets/shared/logo.svg'} width={1000} height={1000} className="max-lg:w-11 w-9 sm:mx-7 lg:mx-0" />
+          <Link
+            href={'/'}            
+          >
+            <Image alt="logo" src={'/assets/shared/logo.svg'} width={1000} height={1000} className="max-lg:w-11 lg:w-19 sm:mx-7 lg:mx-0" />
+          </Link>
           <button
             className="sm:hidden"
             onClick={() => setIsMobileMenuOpen(true)}
@@ -49,7 +53,7 @@ export const Header = ():JSX.Element => {
                 <div className={`${currPage === "destination" ? 'opacity-100 translate-0' : ""} absolute sm:top-11.75 sm:left-1/2 -translate-x-1/2 sm:w-full sm:h-[2.5px] w-1 h-full top-0 right-0 transition duration-300 bg-white opacity-0`}></div>
             </Link>
             <Link 
-              href={"/crew"}
+              href={"/crew/douglas-hurley"}
               onClick={() => setIsMobileMenuOpen(false)}
               className={`text-sm cursor-pointer tracking-widest font-Barlow-Condensed relative hover:[&>div]:opacity-40`}
             >
